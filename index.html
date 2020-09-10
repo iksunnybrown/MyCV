@@ -4,340 +4,517 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  
     <!-- online-fonts -->
 <link href="//fonts.googleapis.com/css?family=Exo+2:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=cyrillic,latin-ext" rel="stylesheet">
 <link href="//fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&amp;subset=latin-ext" rel="stylesheet">
 <!-- //online-fonts -->
 
      <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Fira+Code|Ubuntu:400,600|Dancing+Script:400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Code|Ubuntu:400,600|Dancing+Script:400,700&display=swap" rel="stylesheet">
+    <!-- wow content -->
+    <link rel="stylesheet" type="text/css" href="fonts/animate.css">
+    <script src="fonts/wow.js"></script>
+    <script>
+        wow = new WOW({
+            animateClass: 'animated',
+            offset:       100,
+            callback:     function(box) {
+              console.log("WOW: animating <" + box.tagName.toLowerCase() + ">") }
+          } );
+        wow.init();
+        document.getElementById('moar').onclick = function() {
+          var section = document.createElement('section');
+          section.className = 'section--purple wow fadeInDown';
+          this.parentNode.insertBefore(section, this);};
+      </script>
+    <!-- <script type="text/javascript">new WOW().init();</script> -->
+    <script type="text/javascript" src="fonts/wow.min.js"></script>
+    
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="SmartBuild.png">
-    <!-- <link rel="stylesheet" href="fonts/font-awesome.css">  -->
 
      <!-- fontawesome -->
-    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css"> 
-     <!-- <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script> -->
+     <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
      
-    <title>SmartTech | CV ONE</title>
-    <script>
-      var wss_i = 0;
-      var wss_array = ["HTML5/CSS3","Javascript","Bootstrap","WordPress","Back-end"];
-      var elem;
-      function wssNext(){
-        wss_i++;
-        wss_elem.style.opacity = 0;
-        if (wss_i > (wss_array.length - 1)){
-          wss_i = 0;
-        }
-        setTimeout('wssSlide()', 1000);
-      }
-      function wssSlide(){
-        wss_elem.innerHTML = wss_array[wss_i];
-        wss_elem.style.opacity = 1;
-        setTimeout('wssNext()', 2000);
-      }
-    </script>
+     
+    <title>SmartTech</title>
     
   </head>
   <body id="top" data-spy="scroll" data-target=".navbar" data-offset="60">
+      <!-- menu link and social media links -->
+      <div class="wrapper bg-white border" id="home">
+          <div class="container">
+            <nav class="navbar navbar-expand-md navbar-light bg-white p-0">
+                <div class="collapse navbar-collapse justify-content-between" id="secondarynavbar">
+                    <!-- left link -->
+                    <ul class="navbar-nav">
+                        <li class="nav-item px-2">
+                            <a href="#" class="nav-link">
+                                <p class="m-0"><small>HOME</small></p></a>
+                        </li>
+                        <li class="nav-item px-2">
+                            <a href="#" class="nav-link">
+                                <p class="m-0"><small>SITEMAP</small></p></a>
+                        </li>
+                        <li class="nav-item px-2">
+                            <a href="#" class="nav-link">
+                                <p class="m-0"><small>ARCHIVE</small></p></a>
+                        </li>
+                        <li class="nav-item px-2">
+                            <a href="#" class="nav-link">
+                                <p class="m-0"><small>CONTACT US</small></p></a>
+                        </li>
 
-    <!-- navbar -->
-    <nav class="navbar navbar-expand-md sticky-top navbar-dark bg-dark">
-        <div class="container">
-        <a class="navbar-brand" href="#">SmartTech</a>
-        <!-- <div class="col-auto">  -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
-                <li class="nav-item"><a class="nav-link" href="#myskills">My Skills</a>
-                </li>
-                <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#services" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Services
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Web Development</a>
-                    <a class="dropdown-item" href="#">WordPress</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Back-end-dev</a>
+                    </ul>
+                    <!-- social icons -->
+                    <ul class="d-flex social-icon wow fadeInRightBig" data-wow-delay="0.5s">
+                        <li><a href="https://www.facebook.com/chuks.iyke" target="_blank" class="faicon-facebook rounded-circle">
+                            <i class="fab fa-facebook" href="#"></i></a>
+                        </li>
+                        <li><a href="https://www.twitter.com/chuks_iyke" target="_blank" class="faicon-twitter rounded-circle">
+                            <i class="fab fa-twitter" href="#"></i></a>
+                        </li>
+                        <li><a href="https://www.instagram.com/sunnybrown2000" target="_blank" class="faicon-instagram rounded-circle">
+                            <i class="fab fa-instagram" href="#"></i></a>
+                        </li>
+                        <li><a href="https://www.linkedin.com/in/chukwu-ikenna-b9105184" target="_blank" class="faicon-linkedin rounded-circle">
+                            <i class="fab fa-linkedin" href="#"></i></a>
+                        </li>
+                        <li><a href="#" class="faicon-youtube rounded-circle">
+                            <i class="fab fa-youtube" href="#"></i></a>
+                        </li>
+                    </ul>
                 </div>
-                </li>
-                <li class="nav-item"> <a class="nav-link text-danger" href="#contactme">Contact me</a>
-                </li>
-            </ul>
-         </div> 
-        <!-- </div> -->
-        </div>
-      </nav>
-      <!-- /navbar -->
+            </nav>
+          </div>
 
-      <!-- begin careusel -->
-      <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-          <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
-          <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-          <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="images/photo1.jpg" class="d-block w-100" width="100%" height="500px" alt="...">
-            <div class="carousel-caption d-md-block">
-              <h1 class="display-4">A Web Developer</h1>
-              <p>I offer customized, easy to integrate, and dynamic online shopping store.</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="images/photo5.jpg" class="d-block w-100" width="100%" height="500px" alt="...">
-            <div class="carousel-caption d-md-block">
-              <h1 class="display-4 ">Front-end-Developer</h1>
-              <p>Solution to help you get the best out of your online business.</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="images/photo6.jpg" class="d-block w-100" width="100%" height="500px" alt="...">
-            <div class="carousel-caption d-md-block">
-              <h1 class="display-4">Back-end-Developer</h1>
-              <p>I create your online presence and Link Your business online.</p>
-            </div>
-          </div>
-        </div>
-        <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
       </div>
-      <!-- end careusel -->
+      <!-- header section -->
+      <div class="wrapper py-3 px-5 text-secondary bg-white" id="header" >
+          <header class="d-flex flex-row justify-content-between">
+            <h1 class="d-flex align-items-center wow tada" data-wow-delay="0.2s">
+                <a href="index.html" class="t3">SmartTech.<span class="text-success">Code</span></a>
+            </h1>
+            <h2 class="align-self-end"><small>One stop for All Web Design Codes</small></h2>
+          </header>
 
-        <!-- about me -->
-        <div class="container" id="about">
-            <div class="row">
-                <div class="col-lg-5 aboutme">
-                    <div class="about_img"><img src="images/iyke.jpg" alt="iyke">
-                      <h5>Mr Ikenna</h5>
-                      <div class="about_opa">
-                        <p>Software Engineer</p>
-                        <ul class="fb_icons2 text-center">
-                            <li><a class="fab fa-facebook-f"href="https://www.facebook.com/chuks_iyke" target="_blank"></a></li>
-                            <li><a class="fab fa-twitter" href="https://www.twitter.com/chuks_iyke" target="_blank"></a></li>
-                            <li><a class="fab fa-instagram" href="https://www.instagram.com/sunnybrown2000" target="_blank"></a></li>
-                            <li><a class="fab fa-linkedin" href="https://www.linkedin.com/in/chukwu-ikenna-b9105184" target="_blank"></a></li>
-                            <li><a class="fab fa-pinterest-p" href="#"></a></li>
-                        </ul>
-                      </div>
-                    </div>
-                </div>
-              <div class="aboutme col-lg-7">
-                <h2 class="text-primary">ABOUT ME</h2>
-                <p>i'm Chukwu Sunday Ikenna, a 2 years experienced Web Developer specializing in front-end who's skilled in<em style="color: #00bcd4;"> HTML5, CSS3, Javascript,
-                MYSQL, Bootstrap, WordPress, Node.js, React, Mongoos and PHP.</em> I am looking for a position of a web Developer
-                in a company which will utilize my exellence team management and communication skills. 
-                </p>
-                <p>i am a graduate of computer science in Federal Polytechnic Oko Anambra state Nigeria,
-                    and looking to enhance my professional experience with an IT company specializing in web Development.
-                    Armed with a deep sense of responsibility and possessing very high levels of enthusiasm to give my 110%
-                    for any endeavor. i have developed some project like smartbuildwebsites.com, digitrecipes.com etc.
+      </div>
 
-                </p>
-                <!-- <p><a href="#">Read More</a></p> -->
-              </div>
-            </div>
-           </div>
-        <!-- /about me -->
+      <!-- main Navigation bar -->
 
-        <!-- my Skills -->
-        <div class="container-fluid text-center" id="myskills">
-          
-            <div class="col-12 block-heading text-center">
-              <h1>All My Skills <span id="wss" style="color: chocolate;"></span></h1>
-              <script>wss_elem = document.getElementById("wss"); wssSlide();</script>
-            </div>
-            <div class="row">
-        <div class="container">
-          <div class="card-deck feature-box ">
-             <div class="card col-lg-4">
-               <img class="card-img-top" width="140" height="140" src="images/coding.png" alt="Card image cap">
-               <div class="card-block">
-                 <h4 class="card-title">HTML/CSS3</h4>
-                 <p class="card-text">We develop web applications in HTML5/CSS3, Javascript, React, NodeJS, AngularJS, MongoDB, MySql.
-                  We also develop large scale web applications in Bootstrap, Javascript Frameworks , Wordpress etc.</p>
-                 <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-               </div>
-             </div>
-             <div class="card col-lg-4">
-               <img class="card-img-top" width="140" height="140" src="images/computer.png" alt="Card image cap">
-               <div class="card-block">
-                 <h4 class="card-title">JavaScript</h4>
-                 <p class="card-text">We develop applications for android platform Only, Also help you extend your online reach with API development,
-                  and extensions for web browsers. 
-                 [&hellip;]</p>
-                 <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-               </div>
-             </div>
-             <div class="card col-lg-4">
-               <img class="card-img-top" width="140" height="140" src="images/coding.png" alt="Card image cap">
-               <div class="card-block">
-                 <h4 class="card-title">Node.js</h4>
-                 <p class="card-text">We design a highly customized, dynamic, and easy to integrate websites and applications of any kind
-                  which enable you to create a strong online footprint.[&hellip;]</p>
-                 <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-               </div>
-             </div>
-           </div>
-           </div>
-          </div>
-          </div>
-        <!-- /my Skills -->
-
-        <!-- Services -->
-        <section class="white-section" id="services">
-
+      <div class="wrapper">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-secondary p-0" id="mainNavbar">
             <div class="container">
-              
-              <div class="row">
-                <div class="feature-box col-lg-4">
-                  <i class="icon fas fa-code fa-4x"></i>
-                  <!-- <i class="icon fas fa-check-circle fa-4x"></i> -->
-                  <h3 class="feature-title">HTML5/CSS3</h3>
-                  <p>We design a highly customized, dynamic, and easy to integrate websites
-                     and applications of any kind
-                    which enable you to create a strong online footprint.[&hellip;]</p>
-                </div>
-        
-                <div class="feature-box col-lg-4">
-                  <i class="icon fas fa-bold fa-4x"></i>
-                  <!-- <i class="icon fas fa-bullseye fa-4x"></i> -->
-                  <h3 class="feature-title">Bootstrap/WorldPress</h3>
-                  <p>Built with the latest and Responsive Bootstrap. Easy to used and compatible with all device</p>
-                </div>
-        
-                <div class="feature-box col-lg-4">
-                  <i class="icon fab fa-css3 fa-4x"></i>
-                  <!-- <i class="icon fas fa-heart fa-4x"></i> -->
-                  <h3 class="feature-title">Design with JavaScript.</h3>
-                  <p>I develop highly customized, dynamic and easy to integrate websites with JavaScript</p>
+            <a class="navbar-brand py-2 px-3" href="index.html">SmartTech</a>
+            <!-- <div class="col-auto">  -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavbarContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            
+                <div class="collapse navbar-collapse justify-content-around" id="mainNavbarContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                    <a class="nav-link px-3" href="#home">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#services">Services</a>
+                    </li>
+                    
+                    <li class="nav-item"><a class="nav-link px-3" href="#text-over-image">About Me</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#text-overlap-image">Tech-News</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle px-3" href="#testimonials-carousel" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        My Skills </a>
+                    <div class="dropdown-menu bg-secondary" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Web Development</a>
+                        <a class="dropdown-item" href="#">WordPress</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Full-Stack-Developer</a>
+                    </div>
+                    </li>
+                    <li class="nav-item"> <a class="nav-link px-3" href="#contact">Contact me</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item"> <a class="nav-link px-3 disabled" href="index.html">Login</a>
+                    </li>
+                </ul>
+             </div> 
+            <!-- </div> -->
+            </div>
+          </nav>
+
+      </div>
+
+      <!-- cover image -->
+      <div class="wrapper overlay" id="cover-image">
+          <div class="hor-cen ml-5 pl-5" id="pageinfo">
+              <article class="ml-5 pl-5 wow bounceInUp" data-wow-delay="0.2s">
+                  <h3 class="heading">Bootstrap Websites</h3>
+                  <p class="text-secondary">We Craft Things That Breathe On the Web..</p>
+                  <footer class="mt-5 pt-5">
+                      <ul class="m-0 p-0">
+                          <li class="d-inline-block mr-4">
+                              <a href="#" class="btn btn-danger btn-lg">GET STARTED</a>
+                          </li>
+                          <li class="d-inline-block">
+                            <a href="#" class="btn btn-outline-secondary btn-lg">GET STARTED</a>
+                        </li>
+                      </ul>
+                  </footer>
+
+              </article>
+
+          </div>
+
+      </div>
+      <!-- body content -->
+      <div class="container">
+          <!-- adding border -->
+          <div class="content-wrapper border boder-light-rounded">
+              <!-- services -->
+              <div class="wrapper bg-white text-secondary p-5" id="services">
+                  <div class="p-5">
+<!-- heading -->
+                    <div class="text-center pb-5">
+                        <h2 class="heading">Some of Our Services Offered</h2>
+                        <p>What we are damn good at!</p>
+                    </div>
+                    <ul class="row">
+                        <li class="col-md-4 pt-5 pr-5 wow bounce" data-wow-delay=".4s">
+                            <article>
+                                <i class="fas fa-tools"></i>
+                                <h6 class="heading">Web Development</h6>
+                                <p>We develop web applications in HTML5/CSS3, Javascript, React, NodeJS, AngularJS, MongoDB, MySql.
+                                  We also develop large scale web applications in Bootstrap, Javascript Frameworks , Wordpress etc.[&hellip;]</p>
+                                <footer class="mt-4">
+                                        <a href="#" class="btn btn-danger">Read More</a>
+                                </footer>
+                            </article>
+                        </li>
+                        <li class="col-md-4 pt-5 pr-5 wow fadeInDown" data-wow-delay=".5s">
+                            <article>
+                                <i class="fas fa-mobile"></i>
+                                <h6 class="heading">Mobile App & Plugin Devlopment</h6>
+                                <p>We develop applications for android platform Only, Also help you extend your online reach with API development,
+                                     and extensions for web browsers. 
+                                    [&hellip;]</p>
+                                <footer class="mt-4">
+                                        <a href="#" class="btn btn-danger">Read More</a>
+                                </footer>
+                            </article>
+                        </li>
+                        <li class="col-md-4 pt-5 pr-5 wow fadeInLeft" data-wow-delay=".6s">
+                            <article>
+                                <i class="fas fa-code"></i>
+                                <h6 class="heading">HTML/CSS3</h6>
+                                <p>We design a highly customized, dynamic, and easy to integrate websites and applications of any kind
+                                     which enable you to create a strong online footprint.[&hellip;]</p>
+                                <footer class="mt-4">
+                                        <a href="#" class="btn btn-danger">Read More</a>
+                                </footer>
+                            </article>
+                        </li>
+                    </ul>
+                  </div>
+              </div>
+              <!-- end services -->
+              <!-- about block over image -->
+              <div class="wrapper p-5" id="text-over-image">
+                <div class="row about-center p-5 align-items-center justify-content-center">
+                    <article class="col-md-6 overlay about-img">
+                        <img src="images/iyke1.jpeg"
+                          class="hero-photo"
+                          alt="about iyke1"/>
+                      </article>
+                    <div class="col-md-6 p-5 overlay red wow fadeInLeft" data-wow-delay=".5s">
+                        <section>
+                            <h2 class="heading"> About Me</h2>
+                            <p>i'm Chukwu Sunday Ikenna, a 2 years experienced Web Developer specializing in front-end-development,
+                                 I am looking for a position of a web Developer in a company which will utilize my exellence
+                                  team management and communication skills.</p>
+                        <ul class="fa-ul">
+                            <li><i class="fa-li fa fa-check-circle"></i>
+                                i'm skilled in HTML5, CSS3, Javascript/Jquery, MYSQL,
+                                 Bootstrap, Node.js, React, Mongoos and PHP.
+                            </li>
+                            <li><i class="fa-li fa fa-check-circle"></i>
+                               And good in web design, app development
+                                 WordPress, digital marketing.
+                            </li>
+                        </ul>
+                        <p class="md-5">i am a graduate of computer science in Federal Polytechnic Oko Anambra state Nigeria, 
+                            and looking to enhance my professional experience with an IT company specializing in web Development.
+                             Armed with a deep sense of responsibility and possessing very high levels of enthusiasm to give my 
+                             110% for any endeavor. i have developed some project like smartbuildwebsites.com, digitrecipes.com etc.
+                        </p>
+                        <footer><a href="#" class="btn btn-danger">Read More &raquo;</a></footer>
+                    </section>
+                    </div>
+
                 </div>
               </div>
+              <!-- about block over image end -->
+              <!-- text overlapping image 2 -->
+              <div class="wrapper bg-white text-secondary p-5" id="text-overlap-image">
+                  <div class="row p-5 align-items-center justify-content-center">
+                      <div class="col-md-7" id="first-column">
+                        <a href="#"><img src="images/photo2.jpg"></a>
+                      </div>
+                      <div class="col-md-5 p-5 wow lightSpeedIn" data-wow-delay=".5s" id="second-column">
+                          <p class="font-xs">I develop highly customized Websites</p>
+                          <h2 class="heading mb-3">Huawei’s replacement for (GMS) is coming along nicely</h2>
+                          <p>Building a replacement to Google Mobile Services (GMS) is a gargantuan task
+                            , but Huawei is doing a rather good job. US sanctions, as they stand, means that Huawei will no longer have access to American hardware and software going forward.
+                            </p>
+                            <p>The hardware side presents challenges, but Huawei already makes important components like chipsets in-house (and they’re impressive, too.)
+                                Losing access to Google’s services and having to build an ecosystem which competes with the Play Store and App Store – that,
+                                 however, poses a huge challenge. Just ask Microsoft with its doomed Windows Phone efforts.[&hellip;]</p>
+                        <footer><a href="https://developer-tech.com/news/2020/jul/29/huawei-replacement-google-mobile-services-nicely/" target="_blank">Read More &raquo;</a></footer>
+                    </div>
+
+                  </div>
+
+              </div>
+              <!-- testmonials carousel -->
+              <div class="carousel slide wrapper overlay red p-5" data-ride="carousel" id="testimonials-carousel">
+                  <!-- title carousel -->
+                  <div class="text-center">
+                <h2 class="heading">Some of My Skills</h2>
+                <p>I will help you make your vision a reality because design is thinking made visual.</p>
             </div>
-          </section>
-          <!-- /Services -->
+              </div>
+              <!-- skills carousel -->
+               <!-- skills -->
+    <section class="section skills">
+        <!-- section title -->
+        <div class="container">
+        <div class="section-title text-center p-5">
+          <h2>skills</h2>
+          <div class="underline primary"></div>
+        </div>
+        <!--end of section title -->
+        <div class="section-center skills-center">
+          <article>
+            <h3>front end</h3>
+            <!-- single skill -->
+            <div class="skill">
+              <p>HTML5/CSS3</p>
+              <div class="skill-container">
+                <div class="skill-value"></div>
+                <p class="skill-text">
+                  50%
+                </p>
+              </div>
+            </div>
+            <!--end of  single skill -->
+            <!-- single skill -->
+            <div class="skill">
+              <p>Javascript</p>
+              <div class="skill-container">
+                <div class="skill-value value-70"></div>
+                <p class="skill-text skill-text-70">
+                  70%
+                </p>
+              </div>
+            </div>
+            <!--end of  single skill -->
+            <!-- single skill -->
+            <div class="skill">
+              <p>React</p>
+              <div class="skill-container">
+                <div class="skill-value value-80"></div>
+                <p class="skill-text skill-text-80">
+                  80%
+                </p>
+              </div>
+            </div>
+            <!--end of  single skill -->
+          </article>
+          <article>
+            <h3>back end</h3>
+            <!-- single skill -->
+            <div class="skill">
+              <p>Node.js</p>
+              <div class="skill-container">
+                <div class="skill-value"></div>
+                <p class="skill-text">
+                  50%
+                </p>
+              </div>
+            </div>
+            <!--end of  single skill -->
+            <!-- single skill -->
+            <div class="skill">
+              <p>PHP</p>
+              <div class="skill-container">
+                <div class="skill-value value-70"></div>
+                <p class="skill-text skill-text-70">
+                  60%
+                </p>
+              </div>
+            </div>
+            <!--end of  single skill -->
+            <!-- single skill -->
+            <div class="skill">
+              <p>MongoDB</p>
+              <div class="skill-container">
+                <div class="skill-value value-80"></div>
+                <p class="skill-text skill-text-80">
+                  80%
+                </p>
+              </div>
+            </div>
+            <!--end of  single skill -->
+          </article>
+        </div>
+    </div>
+      </section>
+      <!-- end of skills -->
+      <!-- Body footer -->
+      <div class="wrapper text-grey p-5" id="body-footer">
+          <footer class="row">
+              <!-- Addresses -->
+              <div class="col-md-4 py-5" id="contact">
+                  <h2 class="text-white py-3">You Can Reach Me On</h2>
+                  <ul class="linklist contact mb-5 p-0">
+                      <li><i class="fa fa-map-marker"></i>
+                      <address>
+                          Jakande Area &amp; No 234 close
+                          <br>Prosperity Road Oke-Afe  - 213678
+                          <br>Isolo Lagos, Nigeria
+                      </address>
+                    </li>
+                    <li><i class="fa fa-phone"></i>
+                        +234 7065 361 332
+                    </li>
+                    <li><i class="fa fa-envelope"></i>
+                        iksunnybrown@gmail.com
+                    </li>
+                  </ul>
+                  <!-- social icons -->
+                  <ul class="social-icon wow tada" data-wow-delay="0.2s">
+                    <li><a href="#" class="faicon-facebook rounded-circle">
+                        <i class="fab fa-facebook" href="#"></i></a>
+                    </li>
+                    <li><a href="#" class="faicon-twitter rounded-circle">
+                        <i class="fab fa-twitter" href="#"></i></a>
+                    </li>
+                    <li><a href="#" class="faicon-instagram rounded-circle">
+                        <i class="fab fa-instagram" href="#"></i></a>
+                    </li>
+                    <li><a href="#" class="faicon-linkedin rounded-circle">
+                        <i class="fab fa-linkedin" href="#"></i></a>
+                    </li>
+                    <li><a href="#" class="faicon-youtube rounded-circle">
+                        <i class="fab fa-youtube" href="#"></i></a>
+                    </li>
+                </ul>
+              </div>
 
-            <!-- contact -->
-          <div id="contactme" class="container-fluid">
-            <div class="contact padding">
-                <h3 class="w3l-title">Contact Me</h3>
-                <div class="w3layouts_header">
-                    <p><i class="fab fa-mobile-phone" aria-hidden="true"></i></p>
-                </div>
-                <div class="row agile_banner_bottom_grids">
-                    <div class="col-lg-4 w3_agile_contact_grid">
-                        <div class="agile_contact_grid_left">
-                            <i class="fa fa-map-marker fa-2x" aria-hidden="true"></i>
-                        </div>
-                        <div class="agile_contact_grid_right agilew3_contact">
-                            <h4>Address</h4>
-                            <p>No 3 Prosperity Street</p>
-                            <p>Oke-Afe Ejigbo Lagos</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 w3_agile_contact_grid">
-                        <div class="agile_contact_grid_left agileits_w3layouts_left">
-                            <i class="fa fa-mobile fa-2x" aria-hidden="true"></i>
-                        </div>
-                        <div class="agile_contact_grid_right agileits_w3layouts_right">
-                            <h4>Phone</h4>
-                            <p>+234-706-5361-332</p>
-                            <p>+234-8028-963-016</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 w3_agile_contact_grid">
-                        <div class="agile_contact_grid_left agileits_w3layouts_left1">
-                             <i class="fa fa-envelope-o" aria-hidden="true"></i>
-                        </div>
-                        <div class="agile_contact_grid_right agileits_w3layouts_right1">
-                            <h4>Email</h4>
-                            <p><a href="mailto:info@example.com">iksunnybrown@gmail.com</a>
-                                <span><a href="mailto:iksunnybrown30@gmail.com">iksunnybrown30@gmail.com</a></span></p>
-                        </div>
-                        <div class="clearfix"> </div>
-                    </div>
-                    <div class="clearfix"> </div>
-                </div>
-                </div>
-                </div>
-          <!-- /contact -->
-          <!-- footer -->
-          <hr>
-<div class="footer">
-	<div class="container">
-		<div class="row justify-content-center">
-			<div class="col-lg-3 wthree_footer_grid_left1">
-				<h4>About Me</h4>
-				<p>i'm Chukwu Sunday Ikenna, a 2 years experienced Web Developer specializing in front-end who's skilled in
-                    <em style="color: #00bcd4;"> HTML5, CSS3, Javascript, MYSQL, Bootstrap,
-                         WordPress, Node.js, React, Mongoos and PHP.</em>   </p>
-			</div>
-			<div class="col-lg-3 wthree_footer_grid_left1">
-				<h4>Navigation</h4>
-				<ul>
-					<li><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="index.html">Home</a></li>
-					<li><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="#about" class="scroll">About Me</a></li>
-					<li><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="#services" class="scroll">My Skils</a></li>
-					<li><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="#team" class="scroll">Services</a></li>
-					<li><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="#mail" class="scroll">Contact Me</a></li>
-				</ul>
-			</div>
-			<div class="col-lg-3 wthree_footer_grid_left1">
-				<h4>Others</h4>
-				<ul>
-					<li><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="#">Media</a></li>
-					<li><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="#">Mobile Apps</a></li>
-					<li><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="#">Privacy Policy</a></li>
-				</ul>
-			</div>
-			<div class="col-lg-3 wthree_footer_grid_left1">
-				<h4>Contact Us</h4>
-				<ul>
-					<li><i class="fa fa-envelope-o" aria-hidden="true"></i><a href="mailto:info@example.com">iksunnybrown@gmail.com</a></li>
-					<li><i class="fa fa-phone" aria-hidden="true"></i>+234-706-5361-332</li>
-					<li><i class="fa fa-mobile" aria-hidden="true"></i> +234-802-8963-016</li>
-				</ul>
-			</div>
-			<div class="clearfix"> </div>
-		</div>
-	</div>
-</div>
-<div class="w3layouts_copy_right">
-	<div class="container">
-		<p>© - 2020 SmartTech. All rights reserved | Design by <a href="https://smartbuildwebsites.com">smartbuild.</a> Developed By Ikenna</p>
-	</div>
-</div>
-<a href="#top" id="backtotop"><i class="fa fa-chevron-up"></i></a>
-<!-- /end footer -->
+              <!-- Tech news -->
+              <div class="col-md-4 py-5">
+                  <h2 class="text-white py3">Latest On Our Blog</h2>
+                  <ul class="linklist m-0 p-0">
+                    <li>
+                      <article>
+                        <h5 class="m-0 p-0"><a href="https://developer-tech.com/news/2020/aug/13/twitter-new-api-developers-build-good-bots/" target="_blank">Twitter News Line</a></h5>
+                        <time class="font-xs d-block" datetime="2020-09-09">Saturday, 12<sup>th</sup> September</time>
+                      <p class="m-0 p-0">Twitter has released a new API which it wants developers 
+                          to use to build helpful bots and more powerful third-party apps.
+                          According to a post on the Twitter Developer Blog, [&hellip;]</p>
+                    </article>
+                    </li>
+                    <li>
+                        <article>
+                          <h5 class="m-0 p-0"><a href="https://developer-tech.com/news/2020/aug/13/twitter-new-api-developers-build-good-bots/" target="_blank">TechNews On Twitter</a></h5>
+                          <time class="font-xs d-block" datetime="2020-09-08">Saturday, 12<sup>th</sup> September</time>
+                        <p class="m-0 p-0">However, conversations on Twitter aren’t exactly always productive though. 
+                            Worse still there’s increasing use of bots to sow chaos and/or influence public opinion in
+                             things like elections.[&hellip;]</p>
+                      </article>
+                      </li>
+                  </ul>
+              </div>
 
-<!-- smooth scrolling -->
-<script src="bootstrap/js/SmoothScroll.min.js"></script>
-<!-- //smooth scrolling -->
+              <!-- Newsletter -->
+              <div class="col-md-4 py-5">
+                  <h5 class="text-white py-3">Join Our Newsletter</h5>
+                  <p class="mb-5 p-0">Our free Newsletter will keep you up to date on our latest publications
+                    recent announcements and upcoming press conferences.</p>
+                    <form method="POST" action="#">
+                        <fieldset>
+                            <input class="mb-3" type="text" name="Name" placeholder="name">
+                            <input class="mb-3" type="email" name="Email" placeholder="Email">
+                            <button type="submit" class="btn btn-danger">Submit</button>
+                        </fieldset>
+
+                    </form>
+              </div>
+          </footer>
+      </div>
+
+          </div>
+      </div>
+      <!-- body container end -->
+      <!-- copyright -->
+      <div class="px-5 mx-5" id="copyright">
+          <div class="d-flex justify-content-between">
+              <p>copyright &copy; 2020 - All Right Reserved - <a href="#">SmartTech.Code</a></p>
+            <p>Template by <a href="https://www.smartbuildwebsites.com" target="_blank" title="Bootstrap Template">SmartTech.Code</a></p>
+          </div>
+      </div>
+      <!-- copyright end -->
+
+      <!-- scroll to top -->
+      <a href="#top" id="backtotop"><i class="fa fa-chevron-up"></i></a>
+      <!-- scroll to top -->
+      <!-- floating social icon -->
+      <div class="wrapper d-none" id="sticky-social-icon">
+          <ul class="float-sticky-bar">
+
+              <li class="position-fb faicon-facebook">
+                  <a href="https://www.facebook.com/chuks.iyke" target="_blank">Like us!</a>
+                  <i class="fab fa-facebook"></i>
+                </li>
+                <li class="position-tw faicon-twitter">
+                  <a href="https://www.twitter.com/chuks_iyke" target="_blank">Like us!</a>
+                  <i class="fab fa-twitter"></i>
+                </li>
+                <li class="position-in faicon-instagram">
+                    <a href="https://www.instagram.com/sunnybrown2000" target="_blank">Like us!</a>
+                    <i class="fab fa-instagram"></i>
+                    </li>
+                <li class="position-li faicon-linkedin">
+                    <a href="https://www.linkedin.com/in/chukwu-ikenna-b9105184" target="_blank">Like us!</a>
+                    <i class="fab fa-linkedin"></i>
+              </li>
+              <li class="position-yu faicon-youtube">
+                <a href="#">Like us!</a>
+                <i class="fab fa-youtube"></i>
+          </li>
+          </ul>
+
+      </div>
+      <!-- floating social icon end -->
 
     <!-- Optional JavaScript -->
+    
+      <!-- fixed nav -->
+      <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+      
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-  </body>
+    <!-- backtotop script -->
+    <script type="text/javascript" src="scripts/backtotop.js"></script>
+    <!-- navbar fixed top-->
+    <script type="text/javascript" src="scripts/fixed-navbar.js"></script>
+    <!-- sticky social icon script -->
+    <script type="text/javascript" src="scripts/stickysocialbar.js"></script>
+ </body>
 </html>
